@@ -1,0 +1,11 @@
+/* static/css/parts/footer.css */
+footer {
+    background-color: #333333; /* Dark background color */
+    color: #ffffff; /* Text color */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,20 @@
+/* static/css/parts/nav.css */
+nav {
+    background-color: #4285f4; /* Blue background color */
+    padding: 10px;
+    text-align: center;
+}
+
+nav span {
+    margin: 0 10px;
+}
+
+nav span a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav span a:hover {
+    text-decoration: underline;
+}

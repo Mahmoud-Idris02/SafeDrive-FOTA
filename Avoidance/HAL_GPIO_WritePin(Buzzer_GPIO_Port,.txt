@@ -1,0 +1,117 @@
+HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_RESET);
+		if(ultrasonic_reading_finished_flag)
+	  {
+		  Ultrasonic_Get_Distance(&ultrasonic);
+		 // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+	  }
+	  else{/* Nothing */}
+		
+
+
+	  HAL_UART_Receive(&huart6, (uint8_t*)&bt_value, 1, 20);
+
+
+	  if(bt_value){ last_bt_value = bt_value; }
+	  else{ bt_value = last_bt_value; }
+    
+		if('F' == bt_value){
+			if(distance <= 20){
+				Car_Stop();
+				HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
+			}
+			else{
+			Car_Move_Forward();
+			}
+		}else if('B' == bt_value){
+		  Car_Move_Backward();
+		}else if('R' == bt_value){
+		  Car_Move_Right();
+		}else if('L' == bt_value){
+		  Car_Move_Left();
+		}
+		
+//		switch(bt_value){
+//			case 'F':
+//				Car_Move_Forward();
+//			break;
+//		
+//			default:
+//				Car_Stop();
+//			 break;
+//		}
+
+//	  switch(bt_value)
+//	  {
+
+//		  case 'F':
+//			  if(20 > distance)
+//			  {
+//					Car_Stop();
+//				  HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
+//			  }
+//			  else
+//			  {
+//					Car_Move_Forward();
+//				  HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_RESET);
+//			  }
+//			  break;
+
+//		  case 'B':
+//			  if(20 <= distance)
+//			  {
+//				  HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
+//			  }
+
+//			  Car_Move_Backward();
+//			  break;
+
+//		  case 'R':
+//			  if(20 <= distance)
+//			  {
+//				  HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
+//			  }
+
+//			  Car_Move_Right();
+//			  break;
+
+//		  case 'L':
+//			  if(20 <= distance)
+//			  {
+//				  HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
+//			  }
+
+//			  Car_Move_Left();
+//			  break;
+
+//		  case 'S':
+//			  Car_Stop();
+//			  break;
+
+//		  case '1':
+//			  Car_Stop();
+//			  adjust_PWM_dutyCycle(&htim3, TIM_CHANNEL_1, 50);
+//			  break;
+
+//		  case '2':
+//			  Car_Stop();
+//			  adjust_PWM_dutyCycle(&htim3, TIM_CHANNEL_1, 65);
+//			  break;
+
+//		  case '3':
+//			  Car_Stop();
+//			  adjust_PWM_dutyCycle(&htim3, TIM_CHANNEL_1, 80);
+//			  break;
+
+//		  case '4':
+//			  Car_Stop();
+//			  adjust_PWM_dutyCycle(&htim3, TIM_CHANNEL_1, 100);
+//			  break;
+
+//		  default:
+//				Car_Stop();
+//			  break;
+//	  }
+
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
