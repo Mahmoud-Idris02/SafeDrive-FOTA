@@ -1,6 +1,6 @@
 # SafeDrive-FOTA
 
-![Background Image]([https://link-to-your-image.com/image.png](https://github.com/Mahmoud-Idris02/SafeDrive-FOTA/blob/main/FOTA.png?raw=true])
+![Background Image](https://github.com/Mahmoud-Idris02/SafeDrive-FOTA/blob/main/FOTA.png?raw=true)
 ## Project Overview
 
 In the modern era, vehicles have evolved from being primarily mechanical to complex software-driven machines, commonly referred to as Software Defined Vehicles (SDVs). With this transformation, cars now incorporate extensive lines of code—often exceeding 100 million lines. Managing and updating this software manually at the Original Equipment Manufacturer (OEM) level is no longer feasible. 
