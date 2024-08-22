@@ -23,7 +23,7 @@ Additionally, with the increased connectivity of modern vehicles, there is a hei
 
 ## Technologies Used
 
-- **Programming Languages**: [Embedded C,java, C++, Python]
+- **Programming Languages**: [Embedded C, C++, Python]
 - **Frameworks and Libraries**: [Django]
 - **Security**: [Cyphrer encryption "AES"]
 
