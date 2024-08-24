@@ -20,7 +20,20 @@ Additionally, with the increased connectivity of modern vehicles, there is a hei
 - **Enhanced Security**: Implement advanced cryptographic techniques to safeguard against cyber threats and unauthorized access.
 - **Obstacle Avoidance and Detection System**: Developed to test the functionality of the FOTA system, this feature ensures that the system can manage and update firmware while the vehicle is actively avoiding obstacles.
 - **Vehicle Dashboard**: Implemented as a user interface for the system, providing a comprehensive and intuitive way to interact with and manage the FOTA system and its features.
+## System Architecture
 
+The FOTA system architecture consists of the following components:
+
+1. **FOTA Management Server:** This server controls the distribution of firmware updates to smart cars. It verifies the firmware and securely sends updates to the vehicle.
+   
+2. **Gateway:** The gateway acts as an intermediary between the vehicle and the FOTA management server. It manages the communication between the vehicle control unit (VCU) and the management server, ensuring data is securely transmitted and received. The gateway is responsible for receiving the firmware updates and forwarding them to the vehicle.
+
+3. **Vehicle Control Unit (VCU):** The VCU receives the firmware update from the gateway, verifies its integrity, and installs the new firmware onto the vehicle's systems.
+
+4. **Obstacle Avoidance System:** A sensor-based system within the vehicle designed to detect obstacles and avoid collisions during testing of the firmware updates.
+
+5. **Cryptographic Modules:** Encryption and decryption modules ensure that all communications between the server, gateway, and vehicle are secure and tamper-proof.
+   
 ## Technologies Used
 
 - **Programming Languages**: [Embedded C, C++, Python]
