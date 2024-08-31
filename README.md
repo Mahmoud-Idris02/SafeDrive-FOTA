@@ -39,4 +39,5 @@ The FOTA system architecture consists of the following components:
 - **Programming Languages**: [Embedded C, C++, Python]
 - **Frameworks and Libraries**: [Django]
 - **Security**: [Cyphrer encryption "AES"]
+- **Architecture**:[ARM]
 
